@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:padding="10dp"
+        android:text="@string/lat" />
+    
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_below="@id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:padding="10dp"
+        android:text="@string/lon" />
+    
+    <TextView
+        android:id="@+id/accuracy"
+        android:layout_below="@id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:padding="10dp"
+        android:text="@string/accuracy"
+        />
+    
+    <TextView
+        android:id="@+id/serial_data"
+        android:layout_below="@id/accuracy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:padding="10dp"
+        android:text="@string/serial_data"
+        />
+    
+    <Button
+        android:id="@+id/logging_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toggleLogging"
+        android:text="@string/start_logging"
+        />
+    
+    <ToggleButton
+        android:id="@+id/led_button"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/logging_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sendCommand"
+        android:textOn="@string/led_off"
+        android:textOff="@string/led_on"
+        />
+    
+   <!-- <Button
+        android:id="@+id/usb_button"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/logging_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toggleUsb"
+        android:text="@string/open_usb"
+        />-->
+
+</RelativeLayout>
